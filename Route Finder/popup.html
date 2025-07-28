@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SPA Route Scanner🕵️‍♀️</h1>
+            <p>Find all routes 🔗 in Single Page Applications</p>
+        </div>
+
+        <div class="controls">
+            <div class="button-group">
+                <button id="scanBtn" class="scan-btn">
+                    <span class="btn-text">Start Scanning</span>
+                    <div class="btn-loader"></div>
+                </button>
+                <button id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="export-buttons">
+            <button id="exportJson" class="export-btn" disabled>JSON</button>
+            <button id="exportTxt" class="export-btn" disabled>TXT</button>
+            <button id="exportCsv" class="export-btn" disabled>CSV</button>
+            <button id="copyBtn" class="export-btn" disabled>Copy</button>
+        </div>
+
+        <div id="progressContainer" class="progress-container" style="display: none;">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <div id="progressText" class="progress-text">Initializing...</div>
+        </div>
+
+        <div id="resultsContainer" class="results-container" style="display: none;">
+            <div class="results-header">
+                <h3>Routes (<span id="routeCount">0</span>)</h3>
+                <select id="originSelector" class="origin-selector">
+                    <option value="current">Current Origin</option>
+                    <option value="all">All Origins</option>
+                </select>
+            </div>
+
+            <div class="search-container">
+                <input id="searchInput" class="search-input" placeholder="Filter routes..." type="text">
+            </div>
+
+            <div id="routesList" class="routes-list"></div>
+
+            <div id="statusMessage" class="status-message" style="display: none;"></div>
+        </div>
+
+        <div class="footer">
+            <span>Made with ❤️ by Diff4lt</span>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

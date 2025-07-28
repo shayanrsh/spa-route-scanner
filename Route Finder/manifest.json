@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "SPA Route Scanner",
+  "version": "1.1",
+  "description": "Find all routes in Single Page Applications with auto-scan and persistent progress",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SPA Route Scanner"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["\u003Call_urls\u003E"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
