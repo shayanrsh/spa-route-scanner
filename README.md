@@ -14,7 +14,7 @@
 
 1. **Clone or Download this Repository**
 
-git clone https://github.com/YOUR_USERNAME/spa-route-scanner.git
+git clone https://github.com/shayanrsh/spa-route-scanner.git
 
 
 2. **Open Google Chrome**
